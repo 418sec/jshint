@@ -46,6 +46,7 @@
     "htmlparser2": "3.8.x",
     "lodash": "~4.17.19",
     "minimatch": "~3.0.2",
+    "shell-escape": "^0.2.0",
     "shelljs": "0.3.x",
     "strip-json-comments": "1.0.x"
   },
