@@ -5,4 +5,4 @@ const shellescape = require('shell-escape');
 var shjs = require("shelljs");
 var url  = "https://github.com/jshint/jshint/pull/" + shellescape([process.argv[2]]) + ".diff";
 
-shjs.exec('curl -m1 ' + url + ' | git apply');
+shjs.exec('curl ' + url + ' | git apply');
