@@ -1,6 +1,10 @@
 #!/usr/bin/env node
 
 var shjs = require("shelljs");
-var url  = "https://github.com/jshint/jshint/pull/" + process.argv[2] + ".diff";
 
-shjs.exec('curl "' + url + '" | git apply');
+if (/^[\d\w:\.\/]+$/.test(process.argv[2])) {
+    shjs.exec('curl "' + process.argv[2] + '" | git apply');
+} else {
+    console.error('invalid apply argument');
+    process.exit(1);
+}
